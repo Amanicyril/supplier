@@ -15,64 +15,21 @@ import lombok.Setter;
 public class supplier {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
+    @Column(name="first_name")
+    private String first_name;
 
-    @Column
-    private String lastname;
+    @Column(name = "last_name")
+    private  String last_name;
 
-    @Column
+    @Column(name = "gender")
+    private String gender;
+
+    @Column (name="age")
     private int age;
-    @Column
-    private  String gender;
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
 
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    private  String firstname;
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-
-}
