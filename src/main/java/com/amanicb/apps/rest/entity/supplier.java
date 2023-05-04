@@ -12,7 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name="suppliers")
-public class supplier {
+public class  supplier {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -29,7 +29,10 @@ public class supplier {
     @Column (name="age")
     private int age;
 
+    public long getId() {
+        return id;
     }
+}
 
 
 
